@@ -1,0 +1,83 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Aug 14 00:28:35 2024
+| Host         : Ahmed running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file SPI_top_module_control_sets_placed.rpt
+| Design       : SPI_top_module
+| Device       : xc7a35ti
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    70 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |           11 |
+|      8 |            2 |
+|     12 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              12 |            3 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              70 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------+---------------------------------+------------------+----------------+
+|  Clock Signal  |      Enable Signal      |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++----------------+-------------------------+---------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | dut0/miso_i_1_n_0       | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/rx_data[3]_i_1_n_0 | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/rx_data[7]_i_1_n_0 | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[1]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[8]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[4]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[2]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[5]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[0]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[9]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/p_1_in[6]          | dut1/SR[0]                      |                1 |              2 |
+|  clk_IBUF_BUFG | dut0/rx_data1           | dut0/counter[3]_i_1_n_0         |                1 |              8 |
+|  clk_IBUF_BUFG | dut0/miso0              | dut0/counter_rd_data[3]_i_1_n_0 |                1 |              8 |
+|  clk_IBUF_BUFG |                         | dut1/SR[0]                      |                3 |             12 |
+|  clk_IBUF_BUFG | dut0/E[0]               | dut1/SR[0]                      |                1 |             16 |
+|  clk_IBUF_BUFG | dut0/r_addr_reg[7][0]   | dut1/SR[0]                      |                1 |             16 |
++----------------+-------------------------+---------------------------------+------------------+----------------+
+
+
